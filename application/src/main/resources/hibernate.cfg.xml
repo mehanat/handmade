@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration>
+	<session-factory>
+
+		<mapping resource="hbm/user.hbm.xml"/>
+		<mapping resource="hbm/item.hbm.xml"/>
+
+	</session-factory>
+</hibernate-configuration>

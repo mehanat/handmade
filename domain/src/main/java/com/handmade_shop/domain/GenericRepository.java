@@ -1,5 +1,7 @@
 package com.handmade_shop.domain;
 
+import java.util.List;
+
 public interface GenericRepository<ENTITY> {
 
     ENTITY save(ENTITY entity);

@@ -1,10 +1,20 @@
 package com.handmade_shop.domain.user;
 
-public class User {
+import com.handmade_shop.domain.BaseEntity;
+import lombok.Getter;
 
-    private Long id;
+public class User extends BaseEntity {
 
-    public boolean isNew() {
-        return id == null;
-    }
+    @Getter
+    private String email;
+
+    @Getter
+    private String login;
+
+    @Getter
+    private String firstName;
+
+    @Getter
+    private String lastName;
+
 }

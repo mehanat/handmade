@@ -3,11 +3,12 @@ package com.handmade_shop.application.user;
 import com.handmade_shop.domain.user.User;
 import com.handmade_shop.domain.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
-@Component
+@Repository
 public class UserRepositoryImpl implements UserRepository {
 
     private final EntityManager em;
@@ -35,5 +36,10 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public User get(Long id) {
         return em.find(User.class, id);
+    }
+
+    @Override
+    public List<User> getAll() {
+        return em.createQuery("FROM User", User.class).getResultList();
     }
 }

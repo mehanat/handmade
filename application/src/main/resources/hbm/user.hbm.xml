@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.handmade_shop.domain.user.User" table="app_user">
+        <meta attribute="class-description">
+            Маппинг пользователей
+        </meta>
+
+        <id name="id" column="ID" access="field">
+            <generator class="native"/>
+        </id>
+        <property name="email" column="EMAIL" access="field"/>
+        <property name="login" column="LOGIN" access="field"/>
+        <property name="firstName" column="FIRST_NAME" access="field"/>
+        <property name="lastName" column="LAST_NAME" access="field"/>
+    </class>
+</hibernate-mapping>
