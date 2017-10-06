@@ -13,8 +13,8 @@
             <generator class="native"/>
         </id>
         <property name="name" column="NAME" access="field"/>
-        <property name="rating" column="COST" access="field"/>
-        <set name="items" table="ITEM" lazy="true" cascade="all-delete-orphan" inverse="true" >
+        <property name="rating" column="RATING" access="field"/>
+        <set name="items" table="ITEM" lazy="true" cascade="all-delete-orphan" inverse="true" access="field">
             <key on-delete="cascade">
                 <column name="SHOP_ID" />
             </key>

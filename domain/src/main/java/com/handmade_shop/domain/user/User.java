@@ -2,6 +2,7 @@ package com.handmade_shop.domain.user;
 
 import com.handmade_shop.domain.BaseEntity;
 import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 
@@ -22,9 +23,5 @@ public class User extends BaseEntity {
 
     @Getter
     private Shop shop;
-
-    public void addShop(Shop shop) {
-        this.shop = shop;
-    }
 
 }
