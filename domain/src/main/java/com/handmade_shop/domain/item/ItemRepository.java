@@ -1,7 +1,7 @@
 package com.handmade_shop.domain.item;
 
-import com.handmade_shop.domain.GenericRepository;
+import com.handmade_shop.domain.Repository;
 
-public interface ItemRepository extends GenericRepository<Item> {
+public interface ItemRepository extends Repository<Item> {
 
 }

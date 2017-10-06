@@ -16,5 +16,6 @@
         <property name="login" column="LOGIN" access="field"/>
         <property name="firstName" column="FIRST_NAME" access="field"/>
         <property name="lastName" column="LAST_NAME" access="field"/>
+        <one-to-one name="shop" class="com.handmade_shop.domain.user.Shop" cascade="all-delete-orphan"/>
     </class>
 </hibernate-mapping>

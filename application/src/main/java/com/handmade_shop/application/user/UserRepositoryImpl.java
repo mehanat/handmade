@@ -1,5 +1,6 @@
 package com.handmade_shop.application.user;
 
+import com.handmade_shop.application.GenericRepository;
 import com.handmade_shop.domain.user.User;
 import com.handmade_shop.domain.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,13 +10,16 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
-public class UserRepositoryImpl implements UserRepository {
-
-    private final EntityManager em;
+public class UserRepositoryImpl extends GenericRepository<User> implements UserRepository {
 
     @Autowired
     public UserRepositoryImpl(EntityManager em) {
-        this.em = em;
+        super(em);
+    }
+
+    @Override
+    public Class<User> getType() {
+        return User.class;
     }
 
     @Override

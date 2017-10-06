@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.handmade_shop.domain.user.Shop" table="shop">
+        <meta attribute="class-description">
+            Маппинг магазина
+        </meta>
+
+        <id name="id" column="ID" access="field">
+            <generator class="native"/>
+        </id>
+        <property name="name" column="NAME" access="field"/>
+        <property name="rating" column="COST" access="field"/>
+        <set name="items" table="ITEM" lazy="true" cascade="all-delete-orphan" inverse="true" >
+            <key on-delete="cascade">
+                <column name="SHOP_ID" />
+            </key>
+            <one-to-many class="com.handmade_shop.domain.item.Item" />
+        </set>
+    </class>
+</hibernate-mapping>
